@@ -1,8 +1,8 @@
 function myFunc() {
   var typed = new Typed(".typed", {
-    strings: ["<u>Developer</u>"],
+    strings: ["<u>Web Developer</u>", "<u>Desiner</u>", "<u>Artist</u>"],
     typeSpeed: 150,
-    loop: false,
+    loop: true,
     backDelay: 2000,
     backSpeed: 30,
   });

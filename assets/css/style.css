@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 section {
   padding: 60px 0;
 }
@@ -175,7 +177,7 @@ body {
 #hero {
   width: 100%;
   height: 100vh;
-  background-size: cover;
+  /* background-color: #112534; */
   background-image: url("../img/hero.jpg");
 }
 
@@ -184,13 +186,15 @@ body {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Jost", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 #hero p {
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 #hero .social-links a {
