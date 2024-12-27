@@ -1,6 +1,6 @@
 function myFunc() {
   var typed = new Typed(".typed", {
-    strings: ["<u>Web Developer</u>", "<u>Desiner</u>"],
+    strings: ["<u>Web Developer</u>", "<u>Designer</u>"],
     typeSpeed: 150,
     loop: true,
     backDelay: 2000,
@@ -164,13 +164,48 @@ anni();
 
 // for email
 
-function sendMail() {
-  var parms = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
-  const serviceID = "service_edb4yn6";
-  const templateID = "template_xe88nm3";
-  emailjs.send(serviceID, templateID, parms).then(alert("Email sent"));
-}
+// function sendMail() {
+//   var parms = {
+//     name: document.getElementById("name").value,
+//     email: document.getElementById("email").value,
+//     message: document.getElementById("message").value,
+//   };
+//   const serviceID = "service_edb4yn6";
+//   const templateID = "template_xe88nm3";
+//   emailjs.send(serviceID, templateID, parms).then(alert("Email sent"));
+// }
+
+// window.onload = function () {
+//   document
+//     .getElementById("contact-form")
+//     .addEventListener("submit", function (event) {
+//       event.preventDefault();
+//       // these IDs from the previous steps
+//       emailjs.sendForm("service_edb4yn6", "contact_form", this).then(
+//         () => {
+//           console.log("SUCCESS!");
+//         },
+//         (error) => {
+//           console.log("FAILED...", error);
+//         }
+//       );
+//     });
+// };
+
+window.onload = function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      // these IDs from the previous steps
+      emailjs.sendForm("service_edb4yn6", "template_xe88nm3", this).then(
+        () => {
+          console.log("SUCCESS!");
+          alert("Email send..!");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+};

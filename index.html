@@ -27,17 +27,39 @@
     />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
     <title>Portfolio</title>
+    <!-- emai js -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script type="text/javascript">
       (function () {
+        // https://dashboard.emailjs.com/admin/account
         emailjs.init({
-          publicKey: "qyJJoZudokZrKxD1DLJw2",
+          publicKey: "XtgOUcCrJhGcmKZrh",
         });
       })();
     </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_edb4yn6", "template_xe88nm3", this).then(
+              () => {
+                console.log("SUCCESS!");
+                alert("Email send..!")
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <!-- email js -->
   </head>
   <body>
     <i class="bi mobile-nav-toggle d-lg-none bi-list"></i>
@@ -425,7 +447,7 @@
           <div class="col-lg-6" data-aos="fade-up">
             <h3 class="resume-title">School</h3>
             <div class="resume-item mb-5">
-              <h4>St thomas Hss thomp ,Thrrissur</h4>
+              <h4>St thomas Hss thope ,Thrrissur</h4>
               <p class="fst-italic">compleated in 2015</p>
             </div>
             <h3 class="resume-title">Plus two</h3>
@@ -468,76 +490,40 @@
     <!-- contact section -->
     <section id="contact">
       <div class="container">
-        <div class="section-title mb-5">
+        <div class="section-title mb-5 d-flex flex-column">
           <h2 class="mb-4">Contact</h2>
           <p>
             Have a question or want to collaborate on a project? Feel free to
-            reach out! Fill in the form below, and I,ll get back to you as soon
+            reach out! Fill in the form below, and I'll get back to you as soon
             as possible.
           </p>
         </div>
-        <div class="form">
+        <form id="contact-form">
+          
           <div class="col-md-8 offset-md-2">
-            <form action="#">
-              <div class="form-group">
-                <div class="form-row">
-                  <div class="col">
-                    <label for="name">Full Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      class="form-control"
-                      required=""
-                      value=""
-                    />
-                  </div>
-                  <div class="col">
-                    <label for="email">Email Address</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="form-control"
-                      required=""
-                      value=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  class="form-control"
-                  required=""
-                  value=""
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  class="form-control"
-                  name="message"
-                  rows="8"
-                  required=""
-                ></textarea>
-              </div>
-              <button
-                onclick="sendMail()"
-                class="btn btn-lg btn-dark btn-block"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
 
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+          <input type="hidden" name="contact_number" value="697483" />
+          <label>Name</label></div>
+                  <div class="col">
+          <input class="form-control" type="text" name="name" />
+          <label>Email</label></div>
+        </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="email" name="email" />
+          <label>Message</label></div>
+          <div class="form-group">
+          <textarea class="form-control" name="message" rows="8"></textarea></div>
+
+          <input class="form-control" type="submit" value="Send" />
+        </form></div>
+      </div>
+      
+    </section>
+    <!-- footer section -->
     <section id="footer" class="m-3 p-3">
       <div class="container text-center">
         <h3>SARATH A</h3>
