@@ -192,20 +192,28 @@ anni();
 //     });
 // };
 
-window.onload = function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      // these IDs from the previous steps
-      emailjs.sendForm("service_edb4yn6", "template_xe88nm3", this).then(
-        () => {
-          console.log("SUCCESS!");
-          alert("Email send..!");
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-    });
-};
+// window.onload = function () {
+//   // // Initialize EmailJS with your user ID
+//   // emailjs.init("service_edb4yn6"); // Replace with your EmailJS user ID
+
+//   document
+//     .getElementById("contact-form")
+//     .addEventListener("submit", function (event) {
+//       event.preventDefault();
+
+//       const formStatus = document.getElementById("form-status");
+
+//       emailjs.sendForm("service_edb4yn6", "template_xe88nm3", this).then(
+//         () => {
+//           formStatus.innerHTML =
+//             '<div class="alert alert-success">Message sent successfully!</div>';
+//           this.reset(); // Reset form fields
+//         },
+//         (error) => {
+//           formStatus.innerHTML =
+//             '<div class="alert alert-danger">Failed to send message. Please try again later.</div>';
+//           console.error("FAILED...", error);
+//         }
+//       );
+//     });
+// };

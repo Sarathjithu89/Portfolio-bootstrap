@@ -50,7 +50,7 @@
             emailjs.sendForm("service_edb4yn6", "template_xe88nm3", this).then(
               () => {
                 console.log("SUCCESS!");
-                alert("Email send..!")
+                alert("Email send..!");
               },
               (error) => {
                 console.log("FAILED...", error);
@@ -120,17 +120,22 @@
           <span class="typed"></span>
         </p>
         <div class="social-links text-center">
-          <a href="https://github.com/Sarathjithu89"
+          <a target="_blank" href="https://github.com/Sarathjithu89"
             ><i class="bi bi-github"></i
           ></a>
-          <a href="www.linkedin.com/in/sarath-a-8601a5201"
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/
+          sarath-a-8601a5201
+          "
             ><i class="bi bi-linkedin"></i
           ></a>
           <a
+            target="_blank"
             href="https://www.instagram.com/sarath_373/profilecard/?igsh=MTM5dW53bmM2dWs4dw=="
             ><i class="bi bi-instagram"></i
           ></a>
-          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <!-- <a href="#"><i class="bi bi-twitter-x"></i></a> -->
         </div>
       </div>
     </section>
@@ -499,29 +504,31 @@
           </p>
         </div>
         <form id="contact-form">
-          
           <div class="col-md-8 offset-md-2">
-
             <div class="form-group">
               <div class="form-row">
                 <div class="col">
-          <input type="hidden" name="contact_number" value="697483" />
-          <label>Name</label></div>
-                  <div class="col">
-          <input class="form-control" type="text" name="name" />
-          <label>Email</label></div>
-        </div>
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="email" name="email" />
-          <label>Message</label></div>
-          <div class="form-group">
-          <textarea class="form-control" name="message" rows="8"></textarea></div>
+                  <input type="hidden" name="contact_number" value="697483" />
+                  <label>Name</label>
+                </div>
+                <div class="col">
+                  <input class="form-control" type="text" name="name" />
+                  <label>Email</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="email" name="email" />
+              <label>Message</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="8"></textarea>
+            </div>
 
-          <input class="form-control" type="submit" value="Send" />
-        </form></div>
+            <input class="form-control" type="submit" value="Send" />
+          </div>
+        </form>
       </div>
-      
     </section>
     <!-- footer section -->
     <section id="footer" class="m-3 p-3">
