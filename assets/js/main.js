@@ -1,6 +1,6 @@
 function myFunc() {
   var typed = new Typed(".typed", {
-    strings: ["<u>Web Developer</u>", "<u>Desiner</u>", "<u>Artist</u>"],
+    strings: ["<u>Web Developer</u>", "<u>Desiner</u>"],
     typeSpeed: 150,
     loop: true,
     backDelay: 2000,
@@ -159,6 +159,18 @@ function anni() {
   ).innerHTML = `${data_nascita.toLocaleDateString("it-IT")}`;
   document.getElementById("anni").innerHTML = `${anni}`;
 }
-
 myFunc();
 anni();
+
+// for email
+
+function sendMail() {
+  var parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+  const serviceID = "service_edb4yn6";
+  const templateID = "template_xe88nm3";
+  emailjs.send(serviceID, templateID, parms).then(alert("Email sent"));
+}

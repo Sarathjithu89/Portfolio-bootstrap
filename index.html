@@ -27,6 +27,17 @@
     />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png" />
     <title>Portfolio</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "qyJJoZudokZrKxD1DLJw2",
+        });
+      })();
+    </script>
   </head>
   <body>
     <i class="bi mobile-nav-toggle d-lg-none bi-list"></i>
@@ -467,17 +478,7 @@
         </div>
         <div class="form">
           <div class="col-md-8 offset-md-2">
-            <div class="errors"></div>
-            <form
-              method="POST"
-              id="target"
-              action="https://formsubmit.co/el/hijefu"
-            >
-              <input
-                type="hidden"
-                name="_token"
-                value="iiuuCmEjh1uQ335SeyWGFT4cwNKuHjxbUOJy3tw9"
-              />
+            <form action="#">
               <div class="form-group">
                 <div class="form-row">
                   <div class="col">
@@ -525,9 +526,10 @@
                   required=""
                 ></textarea>
               </div>
-
-              <input type="hidden" value="" name="url" />
-              <button type="submit" class="btn btn-lg btn-dark btn-block">
+              <button
+                onclick="sendMail()"
+                class="btn btn-lg btn-dark btn-block"
+              >
                 Send Message
               </button>
             </form>
@@ -535,6 +537,7 @@
         </div>
       </div>
     </section>
+
     <section id="footer" class="m-3 p-3">
       <div class="container text-center">
         <h3>SARATH A</h3>
